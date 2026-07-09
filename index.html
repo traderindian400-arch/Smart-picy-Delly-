@@ -1417,3 +1417,140 @@ transform:translateY(-8px);
 }
 
 </style>
+<!-- ========================= -->
+<!-- SMART PICKS DAILY PART 6 -->
+<!-- Paste above </body> -->
+<!-- ========================= -->
+
+<div id="loadingScreen">
+<h2>Smart Picks Daily</h2>
+<p>Loading...</p>
+</div>
+
+<script>
+
+// Loading Screen
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+
+document.getElementById("loadingScreen").style.display="none";
+
+},800);
+
+});
+
+// Rating
+
+document.querySelectorAll(".rating").forEach(stars=>{
+
+stars.querySelectorAll("span").forEach((star,index)=>{
+
+star.onclick=function(){
+
+stars.querySelectorAll("span").forEach((s,i)=>{
+
+s.style.color=i<=index?"gold":"gray";
+
+});
+
+};
+
+});
+
+});
+
+// Wishlist
+
+document.querySelectorAll(".wishlist").forEach(btn=>{
+
+btn.onclick=function(){
+
+this.innerHTML="❤️ Saved";
+
+};
+
+});
+
+</script>
+
+<style>
+
+#loadingScreen{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#07111f;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+color:#fff;
+
+}
+
+#loadingScreen h2{
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+.rating{
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+.rating span{
+
+cursor:pointer;
+
+color:gray;
+
+}
+
+.wishlist{
+
+margin-top:15px;
+
+padding:10px 20px;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
+
+.wishlist:hover{
+
+background:#dc2626;
+
+}
+
+</style>
