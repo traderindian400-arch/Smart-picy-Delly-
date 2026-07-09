@@ -1286,3 +1286,134 @@ transform:scale(1.05);
 }
 
 </style>
+<!-- ========================= -->
+<!-- SMART PICKS DAILY PART 5 -->
+<!-- ========================= -->
+
+<button id="themeToggle">🌙</button>
+
+<script>
+
+// Dark / Light Mode
+
+const themeBtn=document.getElementById("themeToggle");
+
+themeBtn.onclick=function(){
+
+document.body.classList.toggle("light-mode");
+
+if(document.body.classList.contains("light-mode")){
+
+themeBtn.innerHTML="☀️";
+
+}else{
+
+themeBtn.innerHTML="🌙";
+
+}
+
+};
+
+// Buttons
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+if(this.getAttribute("href")=="#"){
+
+e.preventDefault();
+
+alert("🚀 Feature Coming Soon!");
+
+}
+
+});
+
+});
+
+</script>
+
+<style>
+
+#themeToggle{
+
+position:fixed;
+
+left:20px;
+
+bottom:20px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#8b5cf6;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+z-index:9999;
+
+}
+
+.light-mode{
+
+background:#f8fafc;
+
+color:#111827;
+
+}
+
+.light-mode header{
+
+background:#ffffffee;
+
+}
+
+.light-mode .card{
+
+background:#ffffff;
+
+color:#111827;
+
+}
+
+.light-mode nav a{
+
+color:#111827;
+
+}
+
+.light-mode .hero p,
+
+.light-mode .section-text,
+
+.light-mode footer{
+
+color:#475569;
+
+}
+
+.card{
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+</style>
