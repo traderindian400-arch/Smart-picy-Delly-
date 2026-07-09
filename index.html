@@ -1855,3 +1855,138 @@ color:#2563eb;
 }
 
 </style>
+<!-- ========================= -->
+<!-- SMART PICKS DAILY PART 9 -->
+<!-- ========================= -->
+
+<section id="trending">
+
+<h2>🔥 Trending Products</h2>
+
+<p class="section-text">
+Most popular products this week.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<span class="badge">HOT</span>
+<h3>ChatGPT Plus</h3>
+<p>Premium AI Assistant for work and study.</p>
+<a href="#" class="btn primary">View Deal</a>
+</div>
+
+<div class="card">
+<span class="badge">NEW</span>
+<h3>Canva Pro</h3>
+<p>Create premium graphics and videos.</p>
+<a href="#" class="btn primary">View Deal</a>
+</div>
+
+<div class="card">
+<span class="badge">BEST</span>
+<h3>Notion AI</h3>
+<p>Smart productivity workspace.</p>
+<a href="#" class="btn primary">View Deal</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="compare">
+
+<h2>⚖ Compare Products</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>AI Tool A</h3>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p>Best for Beginners</p>
+
+</div>
+
+<div class="card">
+
+<h3>AI Tool B</h3>
+
+<p>⭐⭐⭐⭐☆</p>
+
+<p>Best for Business</p>
+
+</div>
+
+<div class="card">
+
+<h3>AI Tool C</h3>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p>Best Overall Value</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.badge{
+
+display:inline-block;
+
+padding:6px 14px;
+
+background:#ef4444;
+
+color:white;
+
+border-radius:20px;
+
+font-size:12px;
+
+font-weight:bold;
+
+margin-bottom:12px;
+
+}
+
+#trending,
+#compare{
+
+padding:80px 8%;
+
+}
+
+</style>
+
+<script>
+
+// Highlight Search
+
+document.querySelector(".search-box button").addEventListener("click",()=>{
+
+const value=document.querySelector(".search-box input").value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+if(card.innerText.toLowerCase().includes(value)){
+
+card.style.border="2px solid #4da3ff";
+
+}else{
+
+card.style.border="none";
+
+}
+
+});
+
+});
+
+</script>
