@@ -1147,3 +1147,142 @@ Privacy Policy | Terms & Conditions | Affiliate Disclosure | Disclaimer
 
 </body>
 </html>
+<!-- ========================= -->
+<!-- PREMIUM FEATURES (PART 4) -->
+<!-- Paste above </body> -->
+<!-- ========================= -->
+
+<button id="backToTop">⬆</button>
+
+<script>
+
+// Search
+document.querySelector(".search-box button").onclick=function(){
+
+let input=document.querySelector(".search-box input").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+if(card.innerText.toLowerCase().includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+};
+
+// Back To Top
+
+const btn=document.getElementById("backToTop");
+
+window.onscroll=function(){
+
+if(window.scrollY>400){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+btn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+// Card Animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition=".6s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+<style>
+
+#backToTop{
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+background:#4da3ff;
+
+color:#fff;
+
+border:none;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.card:hover{
+
+box-shadow:0 15px 40px rgba(77,163,255,.35);
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+}
+
+</style>
