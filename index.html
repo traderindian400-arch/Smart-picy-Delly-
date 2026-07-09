@@ -1990,3 +1990,192 @@ card.style.border="none";
 });
 
 </script>
+<!-- ========================= -->
+<!-- SMART PICKS DAILY PART 10 -->
+<!-- PREMIUM FINAL FEATURES -->
+<!-- ========================= -->
+
+<section id="newsletter-final">
+
+<h2>📬 Never Miss a Deal</h2>
+
+<p class="section-text">
+Subscribe to receive the latest AI tools, software reviews and exclusive deals.
+</p>
+
+<div class="search-box">
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</div>
+
+</section>
+
+<section id="social">
+
+<h2>🌍 Connect With Smart Picks Daily</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📘 Facebook</h3>
+<p>Daily updates and latest deals.</p>
+<a href="#" class="btn primary">Follow</a>
+</div>
+
+<div class="card">
+<h3>📷 Instagram</h3>
+<p>Short tips, reels and AI news.</p>
+<a href="#" class="btn primary">Follow</a>
+</div>
+
+<div class="card">
+<h3>▶ YouTube</h3>
+<p>Video reviews and tutorials.</p>
+<a href="#" class="btn primary">Subscribe</a>
+</div>
+
+<div class="card">
+<h3>📌 Pinterest</h3>
+<p>Discover useful resources.</p>
+<a href="#" class="btn primary">Follow</a>
+</div>
+
+</div>
+
+</section>
+
+<button id="chatBtn">💬</button>
+
+<button id="topBtn">⬆</button>
+
+<script>
+
+// Scroll To Top
+
+document.getElementById("topBtn").onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+// Chat Button
+
+document.getElementById("chatBtn").onclick=function(){
+
+alert("Live Chat feature coming soon!");
+
+};
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+</script>
+
+<style>
+
+#newsletter-final,
+#social{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+#chatBtn{
+
+position:fixed;
+
+right:20px;
+
+bottom:90px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#22c55e;
+
+color:white;
+
+font-size:26px;
+
+cursor:pointer;
+
+z-index:9999;
+
+}
+
+#topBtn{
+
+position:fixed;
+
+right:20px;
+
+bottom:20px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#2563eb;
+
+color:white;
+
+font-size:24px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:9999;
+
+}
+
+footer{
+
+background:#020617;
+
+padding:60px;
+
+text-align:center;
+
+}
+
+footer p{
+
+margin:10px 0;
+
+color:#94a3b8;
+
+}
+
+</style>
