@@ -358,3 +358,121 @@
   }
   .success-strip div b{display:block; font-family:'Space Grotesk'; font-size:24px; color:var(--mint);}
   .success-strip div span{font-size:12.5px; color:var(--ink-soft); font-family:'JetBrains Mono';}
+
+  <!-- ================= BLOG ================= -->
+  <section id="blog" style="background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="section-head reveal">
+      <span class="eyebrow">From the Blog</span>
+      <h2>Guides for growing your business online</h2>
+      <p>Practical, SEO-researched playbooks — no recycled listicles.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#1D4E89,#2FA98C);">📈</div>
+        <div class="blog-body">
+          <div class="blog-meta">Affiliate Marketing · 7 min read</div>
+          <h4>7 Affiliate Offers That Actually Convert in 2026</h4>
+          <p>A breakdown of the niches and offer structures outperforming the market this year.</p>
+          <a href="#" class="read-more">Read the guide →</a>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#C97A3D,#E08F4F);">🤖</div>
+        <div class="blog-body">
+          <div class="blog-meta">AI Trends · 6 min read</div>
+          <h4>How Solo Founders Are Using AI to Skip Hiring</h4>
+          <p>The workflows letting one-person businesses operate like ten-person teams.</p>
+          <a href="#" class="read-more">Read the guide →</a>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#3A4658,#1D4E89);">💼</div>
+        <div class="blog-body">
+          <div class="blog-meta">Business Growth · 9 min read</div>
+          <h4>The Pricing Mistake Killing Your Digital Product Sales</h4>
+          <p>Why "cheaper" rarely means "more sales" — and what to do instead.</p>
+          <a href="#" class="read-more">Read the guide →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section>
+    <div class="newsletter reveal">
+      <span class="eyebrow" style="background:transparent; border-color:#33415A; color:#9FC1E6;">Weekly Digest</span>
+      <h2>Get one useful growth tactic every Tuesday</h2>
+      <p>Join 42,000+ builders getting practical marketing and business tips — no spam, unsubscribe anytime.</p>
+      <form class="news-form" onsubmit="event.preventDefault(); alert('Subscribed!'); event.target.reset();">
+        <input type="email" placeholder="you@company.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="news-note">We respect your inbox. Read our <a href="#" onclick="app.showPage('privacy');" style="text-decoration:underline;">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta">
+    <span class="eyebrow reveal">Ready when you are</span>
+    <h2 class="reveal">Start building your online business today</h2>
+    <p class="reveal">Browse 1,200+ tools, templates, and courses — or talk to us if you're not sure where to start.</p>
+    <div class="hero-ctas reveal">
+      <a href="#" class="btn btn-primary" onclick="app.showPage('marketplace')">Browse the Marketplace →</a>
+      <a href="#" class="btn btn-ghost" onclick="app.showPage('contact')">Talk to Us</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ MARKETPLACE PAGE ============ -->
+<div data-page="marketplace">
+  <section style="padding:40px 24px;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:32px;">
+        <span class="eyebrow">Marketplace</span>
+        <h2>Find Tools That Work</h2>
+        <p>1,200+ vetted products with search, filters & comparison</p>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-container reveal">
+        <input type="text" class="search-bar" id="searchBar" placeholder="Search products, categories..." onkeyup="app.search()">
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+
+      <!-- MARKETPLACE WITH FILTERS -->
+      <div class="marketplace-container reveal">
+        <div class="filter-panel">
+          <div class="filter-group">
+            <h5>Category</h5>
+            <div class="filter-option"><input type="checkbox" id="cat-ai" onchange="app.applyFilters()"><label for="cat-ai">AI Tools</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-marketing" onchange="app.applyFilters()"><label for="cat-marketing">Marketing</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-templates" onchange="app.applyFilters()"><label for="cat-templates">Templates</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-courses" onchange="app.applyFilters()"><label for="cat-courses">Courses</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-ebooks" onchange="app.applyFilters()"><label for="cat-ebooks">Ebooks</label></div>
+          </div>
+          <div class="filter-group">
+            <h5>Price</h5>
+            <div class="filter-option"><input type="checkbox" id="price-free" onchange="app.applyFilters()"><label for="price-free">Free</label></div>
+            <div class="filter-option"><input type="checkbox" id="price-under50" onchange="app.applyFilters()"><label for="price-under50">Under $50</label></div>
+            <div class="filter-option"><input type="checkbox" id="price-50-100" onchange="app.applyFilters()"><label for="price-50-100">$50-$100</label></div>
+            <div class="filter-option"><input type="checkbox" id="price-100plus" onchange="app.applyFilters()"><label for="price-100plus">$100+</label></div>
+          </div>
+          <div class="filter-group">
+            <h5>Sort By</h5>
+            <select onchange="app.setSortBy(this.value)" style="width:100%; padding:8px; border:1px solid var(--line); border-radius:8px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="products-area">
+          <div class="prod-grid" id="marketplaceProducts"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
