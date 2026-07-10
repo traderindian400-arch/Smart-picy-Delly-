@@ -476,3 +476,397 @@
     </div>
   </section>
 </div>
+
+<!-- ============ CATEGORIES PAGE ============ -->
+<div data-page="categories">
+  <section style="padding:40px 24px;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:52px;">
+        <span class="eyebrow">All Categories</span>
+        <h2>Browse by Category</h2>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card reveal" onclick="app.filterByCategory('marketing'); app.showPage('marketplace')"><span class="cat-emoji">📣</span><h4>Marketing Tools</h4><span>240+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('ai'); app.showPage('marketplace')"><span class="cat-emoji">🤖</span><h4>AI Tools</h4><span>180+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('templates'); app.showPage('marketplace')"><span class="cat-emoji">📐</span><h4>Business Templates</h4><span>310+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('ebooks'); app.showPage('marketplace')"><span class="cat-emoji">📚</span><h4>Ebooks</h4><span>150+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('courses'); app.showPage('marketplace')"><span class="cat-emoji">🎓</span><h4>Courses</h4><span>95+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('productivity'); app.showPage('marketplace')"><span class="cat-emoji">✅</span><h4>Productivity Tools</h4><span>120+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('finance'); app.showPage('marketplace')"><span class="cat-emoji">💰</span><h4>Finance Tools</h4><span>75+ items</span></div>
+        <div class="cat-card reveal" onclick="app.filterByCategory('website'); app.showPage('marketplace')"><span class="cat-emoji">🌐</span><h4>Website Resources</h4><span>200+ items</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FAQ PAGE ============ -->
+<div data-page="faq">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:700px;">
+      <div style="text-align:center; margin-bottom:52px;">
+        <h1 style="margin-bottom:16px;">Frequently Asked Questions</h1>
+      </div>
+      <div style="display:grid; gap:20px;">
+        <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:20px;">
+          <h3 style="margin-bottom:8px;">What is Smart Petty Daily?</h3>
+          <p style="color:var(--ink-soft);">A marketplace with 1,200+ vetted digital products for entrepreneurs, including tools, templates, courses, and ebooks.</p>
+        </div>
+        <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:20px;">
+          <h3 style="margin-bottom:8px;">How do I purchase?</h3>
+          <p style="color:var(--ink-soft);">Browse the marketplace, add items to your cart, and checkout. Instant download links available immediately after purchase.</p>
+        </div>
+        <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:20px;">
+          <h3 style="margin-bottom:8px;">Is there a refund policy?</h3>
+          <p style="color:var(--ink-soft);">Yes! 60-day money-back guarantee on all purchases. No questions asked.</p>
+        </div>
+        <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:20px;">
+          <h3 style="margin-bottom:8px;">Can I compare products?</h3>
+          <p style="color:var(--ink-soft);">Yes, click "Compare" on any product to see side-by-side comparison with related items.</p>
+        </div>
+        <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:20px;">
+          <h3 style="margin-bottom:8px;">How does the wishlist work?</h3>
+          <p style="color:var(--ink-soft);">Click the heart icon on any product to save it. Access your wishlist anytime to review or purchase later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT PAGE ============ -->
+<div data-page="contact">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:600px;">
+      <h1 style="text-align:center; margin-bottom:16px;">Get in Touch</h1>
+      <p style="text-align:center; color:var(--ink-soft); margin-bottom:48px;">Questions? We'd love to hear from you.</p>
+      <form onsubmit="event.preventDefault(); alert('Message sent! We\'ll respond within 24 hours.'); event.target.reset();">
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Name</label>
+          <input type="text" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px; font-family:inherit;">
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Email</label>
+          <input type="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px; font-family:inherit;">
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Message</label>
+          <textarea required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px; font-family:inherit; min-height:120px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PRIVACY PAGE ============ -->
+<div data-page="privacy">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:700px;">
+      <h1 style="margin-bottom:24px;">Privacy Policy</h1>
+      <p style="color:var(--ink-soft); margin-bottom:24px;">Smart Petty Daily is committed to protecting your privacy. This policy explains how we collect and use your information.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Data We Collect</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">Name, email, payment details, and browsing information to improve your experience and process orders.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">How We Use Your Data</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">We use your information to deliver products, respond to inquiries, send updates, and prevent fraud. We never sell your data.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Security</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">We use SSL encryption and PCI-DSS compliance to protect your payment information.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Your Rights</h2>
+      <p style="color:var(--ink-soft);">You can request access, correction, or deletion of your data anytime. Contact support@smartpettydaily.com for assistance.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ TERMS PAGE ============ -->
+<div data-page="terms">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:700px;">
+      <h1 style="margin-bottom:24px;">Terms & Conditions</h1>
+      <p style="color:var(--ink-soft); margin-bottom:24px;">By using Smart Petty Daily, you agree to these terms. If you don't agree, please don't use our service.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">License & Use</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">You may use our services for personal, non-commercial purposes. Don't attempt to reverse engineer, copy, or redistribute content without permission.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Disclaimer</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">Products are provided "as-is." While we vet everything, we don't guarantee specific results. Some technical issues may occur.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Limitation of Liability</h2>
+      <p style="color:var(--ink-soft);">Smart Petty Daily is not liable for indirect damages or lost profits. Our maximum liability is limited to your purchase amount.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ REFUND PAGE ============ -->
+<div data-page="refund">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:700px;">
+      <h1 style="margin-bottom:24px;">Refund Policy</h1>
+      <p style="color:var(--ink-soft); margin-bottom:32px; font-size:18px;"><strong>60-Day Money-Back Guarantee</strong></p>
+      <p style="color:var(--ink-soft); margin-bottom:24px;">Not satisfied? Request a refund within 60 days of purchase. No questions asked. We'll credit your original payment method within 3-5 business days.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">How to Request</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">Log in, go to Order History, find your product, and click "Request Refund." Or email support@smartpettydaily.com.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Exceptions</h2>
+      <p style="color:var(--ink-soft);">Refunds not available for: purchases over 60 days old, products resold/shared, or items with 50%+ discount.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AFFILIATE PAGE ============ -->
+<div data-page="affiliate">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:700px;">
+      <h1 style="margin-bottom:24px;">Affiliate Program</h1>
+      <p style="color:var(--ink-soft); margin-bottom:32px;">Earn 15-25% commission on every sale you refer. Perfect for content creators, bloggers, and marketers.</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Program Benefits</h2>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">✓ High commissions (15-25%) ✓ Real-time tracking ✓ 90-day cookie duration ✓ Weekly payouts ✓ Marketing materials provided</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">How It Works</h2>
+      <p style="color:var(--ink-soft); margin-bottom:8px;">1. Sign up for our program</p>
+      <p style="color:var(--ink-soft); margin-bottom:8px;">2. Get unique affiliate links</p>
+      <p style="color:var(--ink-soft); margin-bottom:8px;">3. Promote to your audience</p>
+      <p style="color:var(--ink-soft); margin-bottom:16px;">4. Earn commission for every referral</p>
+      <h2 style="font-size:20px; margin:32px 0 16px;">Apply Now</h2>
+      <p style="color:var(--ink-soft);">Email affiliates@smartpettydaily.com with your website URL and audience size to get started.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CHECKOUT PAGE ============ -->
+<div data-page="checkout">
+  <section style="padding:60px 24px;">
+    <div class="wrap" style="max-width:600px;">
+      <h1 style="text-align:center; margin-bottom:48px;">Checkout</h1>
+      <form onsubmit="event.preventDefault(); app.showPage('confirmation'); alert('Order placed! Check your email for confirmation.');">
+        <h2 style="font-size:18px; margin-bottom:20px;">Billing Information</h2>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Full Name</label>
+          <input type="text" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Email</label>
+          <input type="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Address</label>
+          <input type="text" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+        </div>
+        <h2 style="font-size:18px; margin:32px 0 20px;">Payment</h2>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Card Number</label>
+          <input type="text" placeholder="1234 5678 9012 3456" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;">
+          <div>
+            <label style="display:block; margin-bottom:8px; font-weight:600;">Expiry</label>
+            <input type="text" placeholder="MM/YY" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:8px; font-weight:600;">CVC</label>
+            <input type="text" placeholder="123" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+          </div>
+        </div>
+        <div style="background:var(--blueprint-soft); border-radius:10px; padding:16px; margin-bottom:24px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <span>Total:</span>
+            <span id="checkoutTotal" style="font-weight:700;">$0</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Complete Purchase</button>
+        <button type="button" class="btn btn-ghost" style="width:100%; margin-top:12px;" onclick="app.showPage('marketplace')">Continue Shopping</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONFIRMATION PAGE ============ -->
+<div data-page="confirmation">
+  <section style="padding:100px 24px; text-align:center;">
+    <div class="wrap" style="max-width:600px;">
+      <div style="font-size:64px; margin-bottom:20px;">✓</div>
+      <h1 style="color:var(--mint); margin-bottom:16px;">Order Confirmed!</h1>
+      <p style="color:var(--ink-soft); font-size:16px; margin-bottom:32px;">Thank you! Check your email for download links and order details.</p>
+      <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
+        <h3 style="margin-bottom:12px;">Next Steps</h3>
+        <ol style="text-align:left; margin-left:20px; color:var(--ink-soft);">
+          <li style="margin-bottom:8px;">Check email for confirmation & download links</li>
+          <li style="margin-bottom:8px;">Log in to access your Product Library</li>
+          <li style="margin-bottom:8px;">Download and start using immediately</li>
+          <li>60-day refund guarantee included</li>
+        </ol>
+      </div>
+      <button class="btn btn-primary" onclick="app.showPage('home')">Back to Home</button>
+      <button class="btn btn-ghost" onclick="app.showPage('marketplace')" style="margin-left:12px;">Continue Shopping</button>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AUTH PAGE ============ -->
+<div data-page="auth">
+  <section style="padding:100px 24px;">
+    <div class="wrap" style="max-width:400px;">
+      <h1 style="text-align:center; margin-bottom:32px;">Welcome Back</h1>
+      <div style="background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); padding:40px;">
+        <form onsubmit="event.preventDefault(); alert('Login feature coming soon'); event.target.reset();">
+          <div style="margin-bottom:20px;">
+            <label style="display:block; margin-bottom:8px; font-weight:600;">Email</label>
+            <input type="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+          </div>
+          <div style="margin-bottom:24px;">
+            <label style="display:block; margin-bottom:8px; font-weight:600;">Password</label>
+            <input type="password" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--paper-raised); color:var(--ink); font-size:14px;">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-bottom:16px;">Log In</button>
+        </form>
+        <p style="text-align:center; color:var(--ink-soft); font-size:14px;">Don't have an account? <a href="#" style="color:var(--blueprint); text-decoration:underline;">Sign up</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a onclick="app.showPage('home')" class="logo" style="cursor:pointer;"><span class="mark">S</span>Smart Petty Daily</a>
+      <p>The digital business toolkit for entrepreneurs, marketers, and creators — built worldwide, for a worldwide audience.</p>
+      <div class="social-row">
+        <a href="#">𝕏</a>
+        <a href="#">in</a>
+        <a href="#">◎</a>
+        <a href="#">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Marketplace</h5>
+      <a onclick="app.showPage('marketplace')">Browse Products</a>
+      <a onclick="app.showPage('categories')">Categories</a>
+      <a onclick="app.showPage('affiliate')">Affiliate Program</a>
+      <a href="#">Become a Seller</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a onclick="app.showPage('contact')">Contact Us</a>
+      <a href="#">Blog</a>
+      <a onclick="app.showPage('faq')">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Account</h5>
+      <a onclick="app.showPage('auth')">Log In</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Wishlist</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a onclick="app.showPage('privacy')">Privacy Policy</a>
+      <a onclick="app.showPage('terms')">Terms & Conditions</a>
+      <a onclick="app.showPage('refund')">Refund Policy</a>
+      <a onclick="app.showPage('affiliate')">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Smart Petty Daily, Inc. All rights reserved.</span>
+    <span>Made for builders in 130+ countries.</span>
+  </div>
+</footer>
+
+<script>
+  const app = {
+    currentPage: 'home',
+    cart: [],
+    wishlist: [],
+    recentlyViewed: [],
+    allProducts: [
+      { id: 1, name: 'AI Ad Copy Generator Pro', category: 'ai', price: 49, original: 79, rating: 4.9, reviews: 612, emoji: '🚀', badge: 'BESTSELLER', bg: 'linear-gradient(135deg,#1D4E89,#2FA98C)' },
+      { id: 2, name: 'Startup Pitch Deck Kit', category: 'templates', price: 29, rating: 4.8, reviews: 348, emoji: '📐', badge: 'NEW', bg: 'linear-gradient(135deg,#C97A3D,#E08F4F)' },
+      { id: 3, name: 'Affiliate Marketing Mastery', category: 'courses', price: 129, original: 199, rating: 4.9, reviews: 1100, emoji: '🎓', bg: 'linear-gradient(135deg,#2FA98C,#1D4E89)' },
+      { id: 4, name: 'Social Content Calendar OS', category: 'marketing', price: 19, rating: 4.6, reviews: 204, emoji: '📣', bg: 'linear-gradient(135deg,#3A4658,#1D4E89)' },
+      { id: 5, name: 'Email Marketing Toolkit', category: 'marketing', price: 39, rating: 4.7, reviews: 456, emoji: '📧', bg: 'linear-gradient(135deg,#1D4E89,#C97A3D)' },
+      { id: 6, name: 'SEO Mastery Course', category: 'courses', price: 99, rating: 4.8, reviews: 789, emoji: '🔍', bg: 'linear-gradient(135deg,#2FA98C,#C97A3D)' },
+      { id: 7, name: 'Landing Page Builder', category: 'website', price: 59, original: 79, rating: 4.9, reviews: 534, emoji: '🌐', badge: 'TRENDING', bg: 'linear-gradient(135deg,#E08F4F,#1D4E89)' },
+      { id: 8, name: 'Notion Business Template', category: 'templates', price: 19, rating: 4.5, reviews: 312, emoji: '📊', bg: 'linear-gradient(135deg,#3A4658,#2FA98C)' },
+    ],
+
+    showPage(page) {
+      document.querySelectorAll('[data-page]').forEach(el => el.classList.remove('active'));
+      const target = document.querySelector(`[data-page="${page}"]`);
+      if (target) target.classList.add('active');
+      this.currentPage = page;
+      
+      if (page === 'marketplace') {
+        setTimeout(() => this.renderProducts(this.allProducts), 100);
+      }
+      
+      window.scrollTo(0, 0);
+    },
+
+    renderProducts(products) {
+      const grid = document.getElementById('marketplaceProducts') || document.getElementById('featuredProducts');
+      if (!grid) return;
+      
+      grid.innerHTML = products.slice(0, this.currentPage === 'home' ? 4 : products.length).map(p => `
+        <div class="prod-card reveal">
+          <div class="prod-thumb" style="background:${p.bg};">${p.badge ? `<span class="badge">${p.badge}</span>` : ''}${p.emoji}</div>
+          <div class="prod-body">
+            <span class="prod-cat">${p.category.toUpperCase()}</span>
+            <h4>${p.name}</h4>
+            <div class="stars">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}<span>${p.rating} (${p.reviews})</span></div>
+            <div class="prod-foot">
+              <div class="price">${p.original ? `<small>$${p.original}</small>` : ''}$${p.price}</div>
+              <div style="display:flex; gap:6px;">
+                <button class="wishlist-btn" onclick="app.addToWishlist(${p.id}); event.stopPropagation();" title="Add to wishlist">♥</button>
+                <button class="btn btn-dark btn-sm" onclick="app.addToCart(${p.id}); app.viewProduct(${p.id})">Buy</button>
+                <button class="btn btn-ghost btn-sm" onclick="app.compareProduct(${p.id})">Compare</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    },
+
+    addToCart(id) {
+      const product = this.allProducts.find(p => p.id === id);
+      if (!product) return;
+      
+      this.cart.push({ ...product, quantity: 1 });
+      this.updateCart();
+    },
+
+    updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const cartBadge = document.getElementById('cartBadge');
+      
+      if (this.cart.length === 0) {
+        cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+        cartBadge.style.display = 'none';
+      } else {
+        cartItems.innerHTML = this.cart.map((item, i) => `
+          <div class="cart-item">
+            <div class="cart-item-info">
+              <h5>${item.name}</h5>
+              <span>$${item.price}</span>
+            </div>
+            <button class="cart-item-remove" onclick="app.cart.splice(${i}, 1); app.updateCart()">✕</button>
+          </div>
+        `).join('');
+        cartBadge.textContent = this.cart.length;
+        cartBadge.style.display = 'flex';
+      }
+      
+      const total = this.cart.reduce((sum, item) => sum + item.price, 0);
+      document.getElementById('cartTotal').textContent = `$${total.toFixed(2)}`;
+      if (document.getElementById('checkoutTotal')) {
+        document.getElementById('checkoutTotal').textContent = `$${total.toFixed(2)}`;
+      }
+    },
+
+    addToWishlist(id) {
+      const product = this.allProducts.find(p => p.id === id);
+      if (!product) return;
+      
+      const index = this.wishlist.findIndex(p => p.id === id);
+      if (index >= 0) {
+        this.wishlist.splice(index, 1);
+      } else {
+        this.wishlist.push(product);
+      }
+      
+      this.updateWishlistBadge();
+    },
+
+    updateWishlistBadge() 
