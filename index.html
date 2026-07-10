@@ -869,4 +869,154 @@
       this.updateWishlistBadge();
     },
 
-    updateWishlistBadge() 
+    dateWishlistBadge() {
+      const badge = document.getElementById('wishlistBadge');
+      badge.textContent = this.wishlist.length;
+      badge.style.display = this.wishlist.length > 0 ? 'flex' : 'none';
+    },
+
+    viewProduct(id) {
+      const product = this.allProducts.find(p => p.id === id);
+      if (!product) return;
+      
+      if (!this.recentlyViewed.find(p => p.id === id)) {
+        this.recentlyViewed.unshift(product);
+      }
+      
+      const modal = document.getElementById('productModal');
+      modal.querySelector('#modalBody').innerHTML = `
+        <h2 style="margin-bottom:20px;">${product.name}</h2>
+        <div style="background:${product.bg}; height:200px; border-radius:10px; margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-size:80px;">${product.emoji}</div>
+        <p style="color:var(--ink-soft); margin-bottom:16px;"><strong>Category:</strong> ${product.category}</p>
+        <p style="color:var(--ink-soft); margin-bottom:16px;"><strong>Rating:</strong> ${product.rating}/5 (${product.reviews} reviews)</p>
+        <p style="color:var(--ink-soft); margin-bottom:24px;"><strong>Price:</strong> <span style="font-size:24px; font-weight:700; color:var(--blueprint);">$${product.price}</span></p>
+        <button class="btn btn-primary" style="width:100%; margin-bottom:12px;" onclick="app.addToCart(${product.id}); document.getElementById('productModal').classList.remove('active'); alert('Added to cart!')">Add to Cart</button>
+        <button class="btn btn-ghost" style="width:100%;" onclick="app.compareProduct(${product.id})">Compare with Similar</button>
+      `;
+      modal.classList.add('active');
+    },
+
+    compareProduct(id) {
+      const product = this.allProducts.find(p => p.id === id);
+      const similar = this.allProducts.filter(p => p.category === product.category && p.id !== id).slice(0, 2);
+      
+      const modal = document.getElementById('productModal');
+      let tableHtml = `<h2 style="margin-bottom:20px;">Compare Products</h2>
+        <table class="comparison-table">
+          <tr>
+            <th>Feature</th>
+            <th>${product.name}</th>
+            ${similar.map(p => `<th>${p.name}</th>`).join('')}
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>$${product.price}</td>
+            ${similar.map(p => `<td>$${p.price}</td>`).join('')}
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td>${product.rating}⭐</td>
+            ${similar.map(p => `<td>${p.rating}⭐</td>`).join('')}
+          </tr>
+          <tr>
+            <td>Reviews</td>
+            <td>${product.reviews}</td>
+            ${similar.map(p => `<td>${p.reviews}</td>`).join('')}
+          </tr>
+        </table>`;
+      
+      modal.querySelector('#modalBody').innerHTML = tableHtml;
+      modal.classList.add('active');
+    },
+
+    search() {
+      const query = document.getElementById('searchBar').value.toLowerCase();
+      const dropdown = document.getElementById('searchDropdown');
+      
+      if (query.length < 2) {
+        dropdown.classList.remove('active');
+        return;
+      }
+      
+      const results = this.allProducts.filter(p => p.name.toLowerCase().includes(query));
+      dropdown.innerHTML = results.map(p => `
+        <div class="search-result" onclick="app.viewProduct(${p.id})">
+          <strong>${p.name}</strong><br>
+          <small>$${p.price}</small>
+        </div>
+      `).join('');
+      
+      dropdown.classList.add('active');
+    },
+
+    applyFilters() {
+      let filtered = [...this.allProducts];
+      
+      const categories = [];
+      document.querySelectorAll('[id^="cat-"]:checked').forEach(el => {
+        categories.push(el.id.replace('cat-', ''));
+      });
+      
+      if (categories.length > 0) {
+        filtered = filtered.filter(p => categories.includes(p.category));
+      }
+      
+      this.renderProducts(filtered);
+    },
+
+    filterByCategory(cat) {
+      document.querySelectorAll('[id^="cat-"]').forEach(el => el.checked = false);
+      const checkbox = document.getElementById(`cat-${cat}`);
+      if (checkbox) checkbox.checked = true;
+      this.showPage('marketplace');
+      setTimeout(() => this.applyFilters(), 100);
+    },
+
+    setSortBy(sort) {
+      let sorted = [...this.allProducts];
+      if (sort === 'price-low') sorted.sort((a, b) => a.price - b.price);
+      else if (sort === 'price-high') sorted.sort((a, b) => b.price - a.price);
+      else if (sort === 'rating') sorted.sort((a, b) => b.rating - a.rating);
+      this.renderProducts(sorted);
+    }
+  };
+
+  // Theme toggle
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('themeToggle').textContent = isDark ? '🌙' : '☀️';
+  });
+
+  // Mobile menu
+  document.getElementById('hamburger')?.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Cart button
+  document.getElementById('cartBtn')?.addEventListener('click', () => {
+    document.getElementById('cartSidebar').classList.add('open');
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Init
+  document.addEventListener('DOMContentLoaded', () => {
+    app.renderProducts(app.allProducts);
+    app.updateCart();
+  });
+</script>
+
+</body>
+</html>
