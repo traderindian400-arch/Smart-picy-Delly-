@@ -225,3 +225,146 @@ container.innerHTML += `
 });
 
 }
+// ======================================
+// Smart Picks Daily
+// script.js - Part 3
+// ======================================
+
+// ==============================
+// Dark / Light Mode
+// ==============================
+
+const themeToggle = document.getElementById("themeToggle");
+
+if(themeToggle){
+
+themeToggle.addEventListener("click",()=>{
+
+document.body.classList.toggle("light-mode");
+
+localStorage.setItem(
+"theme",
+document.body.classList.contains("light-mode")
+? "light"
+: "dark"
+);
+
+});
+
+if(localStorage.getItem("theme")==="light"){
+
+document.body.classList.add("light-mode");
+
+}
+
+}
+
+// ==============================
+// Mobile Menu
+// ==============================
+
+const menuBtn=document.getElementById("menuBtn");
+const navbar=document.getElementById("navbar");
+
+if(menuBtn && navbar){
+
+menuBtn.addEventListener("click",()=>{
+
+navbar.classList.toggle("active");
+
+});
+
+}
+
+// ==============================
+// Back To Top
+// ==============================
+
+const topBtn=document.getElementById("backToTop");
+
+window.addEventListener("scroll",()=>{
+
+if(!topBtn) return;
+
+topBtn.style.display=
+window.scrollY>400
+? "flex"
+: "none";
+
+});
+
+if(topBtn){
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+}
+
+// ==============================
+// Newsletter Form
+// ==============================
+
+const newsletter=document.getElementById("newsletterForm");
+
+if(newsletter){
+
+newsletter.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const email=newsletter.querySelector("input").value.trim();
+
+if(email===""){
+
+alert("Please enter your email.");
+
+return;
+
+}
+
+alert("Thanks for subscribing!");
+
+newsletter.reset();
+
+});
+
+}
+
+// ==============================
+// Scroll Animation
+// ==============================
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section,.card,.product-card,.blog-card,.category-card").forEach(item=>{
+
+observer.observe(item);
+
+});
+
+// ======================================
+// End of Script
+// ======================================
+
+console.log("✅ Smart Picks Daily Loaded Successfully");
