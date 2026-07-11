@@ -183,3 +183,93 @@ answer:"Absolutely. We only recommend products that provide real value."
 question:"How often is the website updated?",
 answer:"We regularly publish new reviews, deals and blog articles."
 ];
+// ======================================
+// Smart Picks Daily
+// Data.js - Part 3 (Final)
+// ======================================
+
+const socialLinks = {
+instagram: "https://instagram.com/",
+facebook: "https://facebook.com/",
+youtube: "https://youtube.com/",
+pinterest: "https://pinterest.com/"
+};
+
+const websiteStats = [
+{
+title: "AI Tools Reviewed",
+value: "500+"
+},
+{
+title: "Monthly Visitors",
+value: "100K+"
+},
+{
+title: "Products Compared",
+value: "1,000+"
+},
+{
+title: "Countries Reached",
+value: "50+"
+}
+];
+
+const trustFeatures = [
+{
+icon: "✅",
+title: "Honest Reviews",
+description: "Every recommendation is based on research and real value."
+},
+{
+icon: "🔒",
+title: "Safe & Secure",
+description: "We respect your privacy and never misuse your information."
+},
+{
+icon: "⚡",
+title: "Fast Updates",
+description: "Latest AI tools, software and deals updated regularly."
+},
+{
+icon: "🌍",
+title: "Global Audience",
+description: "Helpful recommendations for users worldwide."
+}
+];
+
+const navigationMenu = [
+"Home",
+"AI Tools",
+"Reviews",
+"Blog",
+"Best Deals",
+"About",
+"Contact"
+];
+
+const footerLinks = {
+company: [
+"About",
+"Contact",
+"Privacy Policy",
+"Terms & Conditions",
+"Affiliate Disclosure",
+"Disclaimer"
+],
+resources: [
+"AI Tools",
+"Software",
+"Useful Websites",
+"Amazon Finds",
+"Digital Products",
+"Blog"
+],
+support: [
+"FAQ",
+"Help Center",
+"Submit a Tool",
+"Report Issue"
+]
+};
+
+console.log("✅ Smart Picks Daily Data Loaded Successfully");
