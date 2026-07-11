@@ -204,3 +204,146 @@ font-size:16px;
 margin:0;
 color:#cbd5e1;
 }
+/* ===========================
+   Sections
+=========================== */
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title span{
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+background:rgba(96,165,250,.15);
+color:#60a5fa;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.section-title h2{
+font-size:42px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+color:#cbd5e1;
+font-size:18px;
+}
+
+/* Categories */
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.category-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:30px;
+transition:.35s;
+backdrop-filter:blur(15px);
+}
+
+.category-card:hover{
+transform:translateY(-8px);
+border-color:#60a5fa;
+box-shadow:0 20px 40px rgba(37,99,235,.20);
+}
+
+.category-icon{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.category-card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.category-card p{
+color:#cbd5e1;
+margin-bottom:18px;
+}
+
+.category-card a{
+color:#60a5fa;
+font-weight:700;
+}
+
+/* Featured Products */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.product-card{
+background:rgba(255,255,255,.05);
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(37,99,235,.20);
+}
+
+.product-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.product-content{
+padding:25px;
+}
+
+.product-content h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.product-content p{
+color:#cbd5e1;
+margin-bottom:18px;
+}
+
+.rating{
+color:#fbbf24;
+margin-bottom:20px;
+font-size:18px;
+}
+
+.product-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.product-buttons a{
+padding:12px 18px;
+border-radius:12px;
+font-weight:700;
+background:#2563eb;
+color:#fff;
+}
+
+.product-buttons a:last-child{
+background:#1e293b;
+}
