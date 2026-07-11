@@ -98,3 +98,88 @@ description:"Improve grammar, writing and communication instantly.",
 link:"#"
 }
 ];
+// ======================================
+// Smart Picks Daily
+// Data.js - Part 2
+// ======================================
+
+const blogPosts = [
+{
+id:1,
+title:"10 Best AI Tools You Should Try in 2026",
+image:"images/blog-ai-tools.jpg",
+category:"AI Tools",
+date:"July 2026",
+excerpt:"Discover the most powerful AI tools for creators, students and professionals.",
+link:"#"
+},
+{
+id:2,
+title:"Best Productivity Apps to Save Time",
+image:"images/blog-productivity.jpg",
+category:"Productivity",
+date:"July 2026",
+excerpt:"Boost your productivity with these amazing apps.",
+link:"#"
+},
+{
+id:3,
+title:"Top Useful Websites Everyone Should Know",
+image:"images/blog-websites.jpg",
+category:"Websites",
+date:"July 2026",
+excerpt:"Free websites that make work easier and faster.",
+link:"#"
+},
+{
+id:4,
+title:"Best Amazon Tech Gadgets Under $50",
+image:"images/blog-amazon.jpg",
+category:"Amazon",
+date:"July 2026",
+excerpt:"Affordable gadgets that are actually worth buying.",
+link:"#"
+}
+];
+
+const testimonials = [
+{
+id:1,
+name:"John Smith",
+country:"United States",
+rating:5,
+review:"Smart Picks Daily helped me discover amazing AI tools that improved my workflow."
+},
+{
+id:2,
+name:"Emma Wilson",
+country:"United Kingdom",
+rating:5,
+review:"Professional reviews with honest recommendations. Highly recommended."
+},
+{
+id:3,
+name:"Rahul Sharma",
+country:"India",
+rating:5,
+review:"Excellent website for software and digital product recommendations."
+}
+];
+
+const faqs = [
+{
+question:"Are your reviews honest?",
+answer:"Yes. Every review is based on research, testing and honest opinions."
+},
+{
+question:"Do you use affiliate links?",
+answer:"Yes. Some links are affiliate links, but they never affect our recommendations."
+},
+{
+question:"Can I trust your recommendations?",
+answer:"Absolutely. We only recommend products that provide real value."
+},
+{
+question:"How often is the website updated?",
+answer:"We regularly publish new reviews, deals and blog articles."
+];
