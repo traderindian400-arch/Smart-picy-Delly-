@@ -1,27 +1,124 @@
-    .          
-  // Cart button
-  document.getElementById('cartBtn')?.addEventListener('click', () => {
-    document.getElementById('cartSidebar').classList.add('open');
-  });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => io.observe(el));
+<title>Smart Picks Daily | Best AI Tools, Software & Digital Products</title>
 
-  // Init
-  document.addEventListener('DOMContentLoaded', () => {
-    app.renderProducts(app.allProducts);
-    app.updateCart();
-  });
-</script>
+<meta name="description" content="Discover the best AI tools, software, productivity apps, websites and digital products. Honest reviews, buying guides and exclusive deals.">
 
-</body>
-</html>
+<meta name="keywords" content="AI Tools, Software Reviews, Productivity Apps, Affiliate Website, Best AI, Smart Picks Daily">
+
+<meta name="author" content="Smart Picks Daily">
+
+<meta property="og:title" content="Smart Picks Daily">
+<meta property="og:description" content="Discover the Best AI Tools & Digital Products in One Place">
+<meta property="og:type" content="website">
+
+<meta name="theme-color" content="#4F46E5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a href="#" class="logo">
+Smart Picks Daily
+</a>
+
+<nav class="navbar">
+
+<a href="#">Home</a>
+
+<a href="#">AI Tools</a>
+
+<a href="#">Software</a>
+
+<a href="#">Websites</a>
+
+<a href="#">Reviews</a>
+
+<a href="#">Blog</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="header-buttons">
+
+<button class="search-btn">
+Search
+</button>
+
+<button class="menu-btn">
+☰
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<span class="badge">
+🔥 Trusted by Smart Buyers
+</span>
+
+<h1>
+Discover the Best AI Tools & Digital Products in One Place
+</h1>
+
+<p>
+Helping creators, freelancers, students and professionals discover the best AI tools, software, productivity apps, useful websites and digital products.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn primary-btn">
+Explore AI Tools
+</a>
+
+<a href="#" class="btn secondary-btn">
+Best Deals
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Tools Reviewed</p>
+</div>
+
+<div class="stat-card">
+<h2>100+</h2>
+<p>Buying Guides</p>
+</div>
+
+<div class="stat-card">
+<h2>Daily</h2>
+<p>Updated</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
