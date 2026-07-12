@@ -73,3 +73,57 @@ alert(error.message);
 });
 
 }
+// ======================================
+// auth.js - Part 3
+// Login System
+// ======================================
+
+async function loginUser(email, password) {
+
+try {
+
+const userCredential = await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+const user = userCredential.user;
+
+if (!user.emailVerified) {
+
+alert("Please verify your email first.");
+
+await signOut(auth);
+
+return;
+
+}
+
+alert("✅ Login Successful!");
+
+window.location.href = "dashboard.html";
+
+} catch (error) {
+
+alert(error.message);
+
+}
+
+}
+
+if (loginForm) {
+
+loginForm.addEventListener("submit", (e) => {
+
+e.preventDefault();
+
+const email = emailInput.value.trim();
+
+const password = passwordInput.value.trim();
+
+loginUser(email, password);
+
+});
+
+}
