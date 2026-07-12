@@ -227,3 +227,91 @@ alert("Category Added Successfully!");
 updateDashboard();
 
 renderProducts();
+/* =====================================
+   Export Data
+===================================== */
+
+const exportBtn = document.getElementById("exportData");
+
+if (exportBtn) {
+
+exportBtn.addEventListener("click", () => {
+
+const backup = {
+
+products,
+
+blogs,
+
+categories
+
+};
+
+const blob = new Blob(
+[JSON.stringify(backup, null, 2)],
+{ type: "application/json" }
+);
+
+const url = URL.createObjectURL(blob);
+
+const a = document.createElement("a");
+
+a.href = url;
+
+a.download = "smart-picks-daily-backup.json";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+});
+
+}
+
+/* =====================================
+   Import Data
+===================================== */
+
+const importBtn = document.getElementById("importData");
+
+if (importBtn) {
+
+importBtn.addEventListener("click", () => {
+
+alert("Firebase version এ Import System যুক্ত করা হবে.");
+
+});
+
+}
+
+/* =====================================
+   Logout
+===================================== */
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+logoutBtn.addEventListener("click", () => {
+
+const ok = confirm("Do you want to logout?");
+
+if (ok) {
+
+window.location.href = "index.html";
+
+}
+
+});
+
+}
+
+/* =====================================
+   Initialize Dashboard
+===================================== */
+
+updateDashboard();
+
+renderProducts();
+
+console.log("Smart Picks Daily Admin Dashboard Loaded Successfully");
