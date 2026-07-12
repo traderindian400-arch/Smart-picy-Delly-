@@ -221,3 +221,42 @@ Add Category
 </table>
 
 </section>
+<!-- ===================================== -->
+<!-- Footer -->
+<!-- ===================================== -->
+
+<footer class="admin-footer">
+
+<p>
+© 2026 Smart Picks Daily. All Rights Reserved.
+</p>
+
+<div class="footer-actions">
+
+<button id="exportData">
+Export Data
+</button>
+
+<button id="importData">
+Import Data
+</button>
+
+<button id="logoutBtn">
+Logout
+</button>
+
+</div>
+
+</footer>
+
+</main>
+
+<!-- ========================= -->
+<!-- JavaScript Files -->
+<!-- ========================= -->
+
+<script src="data.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
