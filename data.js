@@ -85,3 +85,107 @@ description: "Professional graphic design platform with AI-powered features.",
 link: "#"
 }
 ];
+// ======================================
+// Smart Picks Daily
+// data.js - Part 2
+// ======================================
+
+// =========================
+// More Featured Products
+// =========================
+
+featuredProducts.push(
+
+{
+id: 3,
+name: "Notion AI",
+image: "images/notion.jpg",
+rating: 4.8,
+price: "$10/month",
+category: "AI Tools",
+description: "AI powered workspace for notes, documents, tasks and collaboration.",
+link: "#"
+},
+
+{
+id: 4,
+name: "Grammarly Premium",
+image: "images/grammarly.jpg",
+rating: 4.7,
+price: "$12/month",
+category: "AI Tools",
+description: "Improve grammar, spelling and writing with advanced AI.",
+link: "#"
+},
+
+{
+id: 5,
+name: "Adobe Photoshop",
+image: "images/photoshop.jpg",
+rating: 4.9,
+price: "$22/month",
+category: "Software",
+description: "Professional photo editing and graphic design software.",
+link: "#"
+},
+
+{
+id: 6,
+name: "CapCut Pro",
+image: "images/capcut.jpg",
+rating: 4.8,
+price: "$9/month",
+category: "Creator Tools",
+description: "Professional AI video editing tool for creators.",
+link: "#"
+}
+
+);
+
+// =========================
+// Blog Posts
+// =========================
+
+const blogPosts = [
+
+{
+id:1,
+title:"10 Best AI Tools You Should Try in 2026",
+image:"images/blog-ai-tools.jpg",
+category:"AI Tools",
+date:"July 2026",
+excerpt:"Discover the most powerful AI tools for creators, students and professionals.",
+link:"#"
+},
+
+{
+id:2,
+title:"Best Productivity Apps to Save Time",
+image:"images/blog-productivity.jpg",
+category:"Productivity",
+date:"July 2026",
+excerpt:"Boost your productivity with these amazing apps.",
+link:"#"
+},
+
+{
+id:3,
+title:"Top Useful Websites Everyone Should Know",
+image:"images/blog-websites.jpg",
+category:"Websites",
+date:"July 2026",
+excerpt:"Free websites that make work easier and faster.",
+link:"#"
+},
+
+{
+id:4,
+title:"Best Amazon Tech Gadgets Under $50",
+image:"images/blog-amazon.jpg",
+category:"Amazon",
+date:"July 2026",
+excerpt:"Affordable gadgets that are actually worth buying.",
+link:"#"
+}
+
+];
