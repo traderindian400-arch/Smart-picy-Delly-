@@ -32,3 +32,44 @@ const googleBtn = document.querySelector(".google-btn");
 const logoutBtn = document.getElementById("logoutBtn");
 
 console.log("✅ Auth System Loaded");
+// ======================================
+// auth.js - Part 2
+// Register System
+// ======================================
+
+if (loginForm) {
+
+loginForm.addEventListener("submit", async (e) => {
+
+e.preventDefault();
+
+const email = emailInput.value.trim();
+
+const password = passwordInput.value.trim();
+
+try {
+
+const userCredential =
+await createUserWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+await sendEmailVerification(userCredential.user);
+
+alert("✅ Account created successfully! Please verify your email.");
+
+await signOut(auth);
+
+loginForm.reset();
+
+} catch (error) {
+
+alert(error.message);
+
+}
+
+});
+
+}
