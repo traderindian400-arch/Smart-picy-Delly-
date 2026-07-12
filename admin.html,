@@ -117,3 +117,107 @@ Add Product
 </form>
 
 </section>
+<!-- ===================================== -->
+<!-- Add Blog Section -->
+<!-- ===================================== -->
+
+<section class="form-section">
+
+<h2>Add New Blog</h2>
+
+<form id="blogForm">
+
+<input
+type="text"
+id="blogTitle"
+placeholder="Blog Title"
+required>
+
+<input
+type="text"
+id="blogCategory"
+placeholder="Category"
+required>
+
+<input
+type="text"
+id="blogImage"
+placeholder="Featured Image URL">
+
+<textarea
+id="blogDescription"
+placeholder="Short Description"
+required></textarea>
+
+<button type="submit">
+Publish Blog
+</button>
+
+</form>
+
+</section>
+
+<!-- ===================================== -->
+<!-- Add Category -->
+<!-- ===================================== -->
+
+<section class="form-section">
+
+<h2>Add Category</h2>
+
+<form id="categoryForm">
+
+<input
+type="text"
+id="categoryName"
+placeholder="Category Name"
+required>
+
+<input
+type="text"
+id="categoryIcon"
+placeholder="Emoji / Icon">
+
+<button type="submit">
+Add Category
+</button>
+
+</form>
+
+</section>
+
+<!-- ===================================== -->
+<!-- Recent Products -->
+<!-- ===================================== -->
+
+<section class="table-section">
+
+<h2>Recent Products</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+
+<th>Category</th>
+
+<th>Price</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
+
+</section>
