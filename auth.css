@@ -222,3 +222,116 @@ border-color:#3b82f6;
 box-shadow:0 0 0 3px rgba(59,130,246,.2);
 
 }
+/* ======================================
+   auth.css - Part 3
+   Buttons & Responsive
+====================================== */
+
+.options{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+font-size:14px;
+}
+
+.remember{
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.forgot-link{
+color:#60a5fa;
+text-decoration:none;
+font-weight:500;
+}
+
+.forgot-link:hover{
+text-decoration:underline;
+}
+
+.login-btn,
+.google-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+margin-bottom:15px;
+}
+
+.login-btn{
+background:linear-gradient(135deg,#3b82f6,#7c3aed);
+color:#fff;
+}
+
+.login-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 30px rgba(59,130,246,.35);
+}
+
+.google-btn{
+background:#ffffff;
+color:#111827;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.google-btn:hover{
+background:#f3f4f6;
+}
+
+.divider{
+text-align:center;
+margin:20px 0;
+color:#cbd5e1;
+font-size:14px;
+}
+
+.signup-text{
+text-align:center;
+margin-top:20px;
+font-size:15px;
+}
+
+.signup-text a{
+color:#60a5fa;
+font-weight:600;
+text-decoration:none;
+}
+
+.security-note{
+margin-top:20px;
+text-align:center;
+font-size:13px;
+color:#cbd5e1;
+}
+
+.security-note i{
+margin-right:8px;
+color:#22c55e;
+}
+
+@media(max-width:992px){
+
+.auth-container{
+flex-direction:column;
+padding:25px;
+}
+
+.auth-left{
+display:none;
+}
+
+.login-box{
+max-width:100%;
+}
+
+}
