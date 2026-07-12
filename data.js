@@ -189,3 +189,166 @@ link:"#"
 }
 
 ];
+// ======================================
+// Smart Picks Daily
+// data.js - Part 3 (Final)
+// ======================================
+
+// =========================
+// Testimonials
+// =========================
+
+const testimonials = [
+{
+id:1,
+name:"John Smith",
+country:"United States",
+rating:5,
+review:"Smart Picks Daily helped me discover amazing AI tools that improved my workflow."
+},
+{
+id:2,
+name:"Emma Wilson",
+country:"United Kingdom",
+rating:5,
+review:"Professional reviews with honest recommendations. Highly recommended."
+},
+{
+id:3,
+name:"Rahul Sharma",
+country:"India",
+rating:5,
+review:"Excellent website for software and digital product recommendations."
+}
+];
+
+// =========================
+// FAQs
+// =========================
+
+const faqs = [
+{
+question:"Are your reviews honest?",
+answer:"Yes. Every review is based on research, testing and honest opinions."
+},
+{
+question:"Do you use affiliate links?",
+answer:"Yes. Some links are affiliate links, but they never affect our recommendations."
+},
+{
+question:"Can I trust your recommendations?",
+answer:"Absolutely. We only recommend products that provide real value."
+},
+{
+question:"How often is the website updated?",
+answer:"We regularly publish new reviews, deals and blog articles."
+}
+];
+
+// =========================
+// Social Links
+// =========================
+
+const socialLinks = {
+instagram:"https://instagram.com/",
+facebook:"https://facebook.com/",
+youtube:"https://youtube.com/",
+pinterest:"https://pinterest.com/"
+};
+
+// =========================
+// Website Stats
+// =========================
+
+const websiteStats = [
+{
+title:"AI Tools Reviewed",
+value:"500+"
+},
+{
+title:"Monthly Visitors",
+value:"100K+"
+},
+{
+title:"Products Compared",
+value:"1,000+"
+},
+{
+title:"Countries Reached",
+value:"50+"
+}
+];
+
+// =========================
+// Trust Features
+// =========================
+
+const trustFeatures = [
+{
+icon:"✅",
+title:"Honest Reviews",
+description:"Every recommendation is based on research and real value."
+},
+{
+icon:"🔒",
+title:"Safe & Secure",
+description:"We respect your privacy and never misuse your information."
+},
+{
+icon:"⚡",
+title:"Fast Updates",
+description:"Latest AI tools, software and deals updated regularly."
+},
+{
+icon:"🌍",
+title:"Global Audience",
+description:"Helpful recommendations for users worldwide."
+}
+];
+
+// =========================
+// Navigation
+// =========================
+
+const navigationMenu = [
+"Home",
+"AI Tools",
+"Reviews",
+"Blog",
+"Best Deals",
+"About",
+"Contact"
+];
+
+// =========================
+// Footer Links
+// =========================
+
+const footerLinks = {
+company:[
+"About",
+"Contact",
+"Privacy Policy",
+"Terms & Conditions",
+"Affiliate Disclosure",
+"Disclaimer"
+],
+
+resources:[
+"AI Tools",
+"Software",
+"Useful Websites",
+"Amazon Finds",
+"Digital Products",
+"Blog"
+],
+
+support:[
+"FAQ",
+"Help Center",
+"Submit a Tool",
+"Report Issue"
+]
+};
+
+console.log("✅ Smart Picks Daily Data Loaded Successfully");
