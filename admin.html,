@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Picks Daily Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<header class="admin-header">
+
+<div class="logo">
+
+<h1>Smart Picks Daily</h1>
+
+<p>Admin Dashboard</p>
+
+</div>
+
+<nav>
+
+<a href="index.html">Website</a>
+
+<a href="#">Dashboard</a>
+
+<a href="#">Products</a>
+
+<a href="#">Blogs</a>
+
+<a href="#">Settings</a>
+
+</nav>
+
+</header>
+
+<main class="admin-container">
+
+<section class="dashboard-cards">
+
+<div class="dashboard-card">
+
+<h2>Total Products</h2>
+
+<h1 id="totalProducts">0</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>Total Blogs</h2>
+
+<h1 id="totalBlogs">0</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>Total Categories</h2>
+
+<h1 id="totalCategories">0</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>Total Visitors</h2>
+
+<h1>0</h1>
+
+</div>
+
+</section>
+
+<section class="form-section">
+
+<h2>Add New Product</h2>
+
+<form id="productForm">
+
+<input
+type="text"
+id="productName"
+placeholder="Product Name"
+required>
+
+<input
+type="text"
+id="productCategory"
+placeholder="Category"
+required>
+
+<input
+type="text"
+id="productImage"
+placeholder="Image URL">
+
+<input
+type="text"
+id="productPrice"
+placeholder="Price">
+
+<textarea
+id="productDescription"
+placeholder="Product Description"></textarea>
+
+<button type="submit">
+Add Product
+</button>
+
+</form>
+
+</section>
