@@ -35,3 +35,96 @@ function saveData() {
 
 // Initial Load
 updateDashboard();
+/* =====================================
+   Add Product
+===================================== */
+
+const productForm = document.getElementById("productForm");
+
+if (productForm) {
+
+productForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const product = {
+
+id: Date.now(),
+
+name: document.getElementById("productName").value,
+
+category: document.getElementById("productCategory").value,
+
+image: document.getElementById("productImage").value,
+
+price: document.getElementById("productPrice").value,
+
+description: document.getElementById("productDescription").value,
+
+rating: 5,
+
+createdAt: new Date().toLocaleDateString()
+
+};
+
+products.push(product);
+
+saveData();
+
+this.reset();
+
+alert("Product Added Successfully!");
+
+renderProducts();
+
+});
+
+}
+
+/* =====================================
+   Render Products Table
+===================================== */
+
+function renderProducts(){
+
+const table = document.getElementById("productTable");
+
+if(!table) return;
+
+table.innerHTML = "";
+
+products.forEach((product,index)=>{
+
+table.innerHTML += `
+
+<tr>
+
+<td>${product.name}</td>
+
+<td>${product.category}</td>
+
+<td>${product.price}</td>
+
+<td>Active</td>
+
+<td>
+
+<button onclick="deleteProduct(${index})">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+}
+
+/* Initial Render */
+
+renderProducts();
