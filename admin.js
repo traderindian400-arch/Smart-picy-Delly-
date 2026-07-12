@@ -128,3 +128,102 @@ Delete
 /* Initial Render */
 
 renderProducts();
+/* =====================================
+   Delete Product
+===================================== */
+
+function deleteProduct(index){
+
+const confirmDelete = confirm("Are you sure you want to delete this product?");
+
+if(!confirmDelete) return;
+
+products.splice(index,1);
+
+saveData();
+
+renderProducts();
+
+}
+
+/* =====================================
+   Add Blog
+===================================== */
+
+const blogForm = document.getElementById("blogForm");
+
+if(blogForm){
+
+blogForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const blog = {
+
+id: Date.now(),
+
+title: document.getElementById("blogTitle").value,
+
+category: document.getElementById("blogCategory").value,
+
+image: document.getElementById("blogImage").value,
+
+description: document.getElementById("blogDescription").value,
+
+createdAt: new Date().toLocaleDateString()
+
+};
+
+blogs.push(blog);
+
+saveData();
+
+this.reset();
+
+alert("Blog Published Successfully!");
+
+});
+
+}
+
+/* =====================================
+   Add Category
+===================================== */
+
+const categoryForm = document.getElementById("categoryForm");
+
+if(categoryForm){
+
+categoryForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const category = {
+
+id: Date.now(),
+
+name: document.getElementById("categoryName").value,
+
+icon: document.getElementById("categoryIcon").value
+
+};
+
+categories.push(category);
+
+saveData();
+
+this.reset();
+
+alert("Category Added Successfully!");
+
+});
+
+}
+
+/* =====================================
+   Refresh Dashboard
+===================================== */
+
+updateDashboard();
+
+renderProducts();
