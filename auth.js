@@ -255,3 +255,81 @@ alert(error.message);
 }
 
 console.log("✅ Auth Part 3 Loaded");
+// ======================================
+// auth.js - Part 4 (Final)
+// Forgot Password + Session + Dashboard Protection
+// ======================================
+
+import {
+sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+// =========================
+// Forgot Password
+// =========================
+
+const forgotLink = document.querySelector(".forgot-link");
+
+if (forgotLink) {
+
+forgotLink.addEventListener("click", async (e) => {
+
+e.preventDefault();
+
+const email = prompt("Enter your registered email:");
+
+if (!email) return;
+
+try {
+
+await sendPasswordResetEmail(auth, email);
+
+alert("Password reset email sent successfully.");
+
+} catch (error) {
+
+alert(error.message);
+
+}
+
+});
+
+}
+
+// =========================
+// Auto Login Session
+// =========================
+
+onAuthStateChanged(auth, (user) => {
+
+if (user) {
+
+console.log("Current User:", user.email);
+
+} else {
+
+console.log("No Active Session");
+
+}
+
+});
+
+// =========================
+// Dashboard Protection
+// =========================
+
+if (window.location.pathname.includes("dashboard.html")) {
+
+onAuthStateChanged(auth, (user) => {
+
+if (!user) {
+
+window.location.href = "login.html";
+
+}
+
+});
+
+}
+
+console.log("✅ Smart Picks Daily Authentication Ready");
