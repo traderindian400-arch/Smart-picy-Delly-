@@ -185,3 +185,73 @@ alert(error.message);
 }
 
 }
+// ======================================
+// auth.js - Part 3
+// Google Login + Logout
+// ======================================
+
+import {
+GoogleAuthProvider,
+signInWithPopup,
+signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+// =========================
+// Google Login
+// =========================
+
+const provider = new GoogleAuthProvider();
+
+const googleBtn = document.querySelector(".google-btn");
+
+if (googleBtn) {
+
+googleBtn.addEventListener("click", async () => {
+
+try {
+
+const result = await signInWithPopup(auth, provider);
+
+alert("✅ Welcome " + result.user.displayName);
+
+window.location.href = "dashboard.html";
+
+} catch (error) {
+
+alert(error.message);
+
+}
+
+});
+
+}
+
+// =========================
+// Logout
+// =========================
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+logoutBtn.addEventListener("click", async () => {
+
+try {
+
+await signOut(auth);
+
+alert("Logged Out Successfully");
+
+window.location.href = "login.html";
+
+} catch (error) {
+
+alert(error.message);
+
+}
+
+});
+
+}
+
+console.log("✅ Auth Part 3 Loaded");
