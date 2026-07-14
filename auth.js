@@ -1,24 +1,17 @@
-
 // ======================================
 // Smart Picks Daily
 // auth.js - Part 1
-// Firebase Authentication
 // ======================================
 
 import { auth } from "./firebase.js";
 
 import {
-createUserWithEmailAndPassword,
 signInWithEmailAndPassword,
-onAuthStateChanged,
-signOut,
-sendPasswordResetEmail,
-sendEmailVerification,
-updateProfile
+onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 // =========================
-// DOM Elements
+// DOM
 // =========================
 
 const loginForm = document.getElementById("loginForm");
@@ -27,84 +20,61 @@ const emailInput = document.getElementById("email");
 
 const passwordInput = document.getElementById("password");
 
-const googleBtn = document.querySelector(".google-btn");
+// =========================
+// Login
+// =========================
 
-const logoutBtn = document.getElementById("logoutBtn");
+if(loginForm){
 
-console.log("✅ Auth System Loaded");
-// ======================================
-// auth.js - Part 2
-// Register System
-// ======================================
-
-if (loginForm) {
-
-loginForm.addEventListener("submit", async (e) => {
+loginForm.addEventListener("submit",async(e)=>{
 
 e.preventDefault();
 
-const email = emailInput.value.trim();
+const email=emailInput.value.trim();
 
-const password = passwordInput.value.trim();
+const password=passwordInput.value.trim();
 
-try {
+if(email===""||password===""){
 
-const userCredential =
-await createUserWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-await sendEmailVerification(userCredential.user);
-
-alert("✅ Account created successfully! Please verify your email.");
-
-await signOut(auth);
-
-loginForm.reset();
-
-} catch (error) {
-
-alert(error.message);
-
-}
-
-});
-
-}
-// ======================================
-// auth.js - Part 3
-// Login System
-// ======================================
-
-async function loginUser(email, password) {
-
-try {
-
-const userCredential = await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-const user = userCredential.user;
-
-if (!user.emailVerified) {
-
-alert("Please verify your email first.");
-
-await signOut(auth);
+alert("Please fill all fields.");
 
 return;
 
 }
 
-alert("✅ Login Successful!");
+try{
 
-window.location.href = "dashboard.html";
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
 
-} catch (error) {
+window.location.href="dashboard.html";
+
+}catch(error){
+
+switch(error.code){
+
+case "auth/invalid-credential":
+
+alert("Invalid Email or Password.");
+
+break;
+
+case "auth/user-not-found":
+
+alert("User not found.");
+
+break;
+
+case "auth/wrong-password":
+
+alert("Wrong Password.");
+
+break;
+
+default:
 
 alert(error.message);
 
@@ -112,18 +82,26 @@ alert(error.message);
 
 }
 
-if (loginForm) {
-
-loginForm.addEventListener("submit", (e) => {
-
-e.preventDefault();
-
-const email = emailInput.value.trim();
-
-const password = passwordInput.value.trim();
-
-loginUser(email, password);
-
 });
 
 }
+
+// =========================
+// Session Check
+// =========================
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+console.log("Logged In:",user.email);
+
+}else{
+
+console.log("No User Logged In");
+
+}
+
+});
+
+console.log("✅ Auth Part 1 Loaded");
