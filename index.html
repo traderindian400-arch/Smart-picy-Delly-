@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Smart Picks Daily | Best AI Tools, Software & Digital Products</title>
 
-<meta name="description" content="Discover the best AI tools, software, productivity apps, websites and digital products. Honest reviews, buying guides and exclusive deals.">
+<meta name="description" content="Discover the best AI tools, software, productivity apps, websites, digital products and honest reviews.">
 
-<meta name="keywords" content="AI Tools, Software Reviews, Productivity Apps, Affiliate Website, Best AI, Smart Picks Daily">
+<meta name="keywords" content="AI Tools, Software Reviews, Best AI, Affiliate Website, Smart Picks Daily">
 
 <meta name="author" content="Smart Picks Daily">
+
+<meta name="theme-color" content="#4F46E5">
 
 <meta property="og:title" content="Smart Picks Daily">
 <meta property="og:description" content="Discover the Best AI Tools & Digital Products in One Place">
 <meta property="og:type" content="website">
-
-<meta name="theme-color" content="#4F46E5">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,21 +26,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
+
+<!-- ========================= -->
+<!-- Header -->
+<!-- ========================= -->
 
 <header class="header">
 
 <div class="container">
 
-<a href="#" class="logo">
+<a href="index.html" class="logo">
 Smart Picks Daily
 </a>
 
-<nav class="navbar">
+<nav class="navbar" id="navbar">
 
-<a href="#">Home</a>
+<a href="index.html">Home</a>
 
 <a href="#">AI Tools</a>
 
@@ -58,12 +68,82 @@ Smart Picks Daily
 
 <div class="header-buttons">
 
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search...">
+
 <button class="search-btn">
-Search
+<i class="fas fa-search"></i>
 </button>
 
-<button class="menu-btn">
-☰
+</div>
+
+<button
+id="themeToggle"
+class="theme-btn">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<a
+href="login.html"
+id="loginBtn"
+class="login-btn">
+
+Login
+
+</a>
+
+<a
+href="login.html"
+id="signupBtn"
+class="signup-btn">
+
+Sign Up
+
+</a>
+
+<div
+class="user-menu"
+id="userMenu"
+style="display:none;">
+
+<img
+id="userAvatar"
+src="https://ui-avatars.com/api/?name=User"
+alt="User">
+
+<span id="userName">
+User
+</span>
+
+<a
+href="dashboard.html"
+class="dashboard-btn">
+
+Dashboard
+
+</a>
+
+<button
+id="logoutBtn">
+
+Logout
+
+</button>
+
+</div>
+
+<button
+id="menuBtn"
+class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
 </button>
 
 </div>
@@ -72,30 +152,52 @@ Search
 
 </header>
 
+<!-- ========================= -->
+<!-- Hero -->
+<!-- ========================= -->
+
 <section class="hero">
 
 <div class="container hero-content">
 
 <span class="badge">
-🔥 Trusted by Smart Buyers
+
+🔥 Trusted by Thousands of Smart Buyers
+
 </span>
 
 <h1>
-Discover the Best AI Tools & Digital Products in One Place
+
+Discover the Best AI Tools &
+Digital Products in One Place
+
 </h1>
 
 <p>
-Helping creators, freelancers, students and professionals discover the best AI tools, software, productivity apps, useful websites and digital products.
+
+Helping creators, freelancers,
+students and professionals discover
+the best AI tools, websites,
+software and digital products.
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn primary-btn">
+<a
+href="#products"
+class="btn primary-btn">
+
 Explore AI Tools
+
 </a>
 
-<a href="#" class="btn secondary-btn">
+<a
+href="#deals"
+class="btn secondary-btn">
+
 Best Deals
+
 </a>
 
 </div>
@@ -103,296 +205,26 @@ Best Deals
 <div class="hero-stats">
 
 <div class="stat-card">
+
 <h2>500+</h2>
-<p>Tools Reviewed</p>
+
+<p>AI Tools</p>
+
 </div>
 
 <div class="stat-card">
+
 <h2>100+</h2>
+
 <p>Buying Guides</p>
+
 </div>
 
 <div class="stat-card">
-<h2>Daily</h2>
-<p>Updated</p>
-</div>
 
-</div>
+<h2>24/7</h2>
 
-</div>
-
-</section>
-<!-- Featured Categories -->
-
-<section class="categories">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Browse Categories</span>
-
-<h2>Explore Popular Categories</h2>
-
-<p>
-Find the best tools, apps and products carefully selected by Smart Picks Daily.
-</p>
-
-</div>
-
-<div class="category-grid">
-
-<div class="category-card">
-<div class="category-icon">🤖</div>
-<h3>AI Tools</h3>
-<p>Best AI tools for creators and professionals.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">📱</div>
-<h3>Android Apps</h3>
-<p>Useful apps for work and daily productivity.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">🌐</div>
-<h3>Useful Websites</h3>
-<p>Websites that save time and improve workflow.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">💻</div>
-<h3>Software</h3>
-<p>Professional software for business and creators.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">🛒</div>
-<h3>Amazon Finds</h3>
-<p>Top-rated gadgets and useful products.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">📚</div>
-<h3>Digital Products</h3>
-<p>Courses, templates, ebooks and digital assets.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">🎥</div>
-<h3>Creator Tools</h3>
-<p>Everything for YouTubers and content creators.</p>
-<a href="#">Explore →</a>
-</div>
-
-<div class="category-card">
-<div class="category-icon">💰</div>
-<h3>Best Deals</h3>
-<p>Latest discounts and exclusive offers.</p>
-<a href="#">Explore →</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Featured Products -->
-
-<section class="featured-products">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Top Picks</span>
-
-<h2>Featured Products</h2>
-
-<p>
-Our editors carefully review and recommend only quality products.
-</p>
-
-</div>
-
-<div class="product-grid">
-
-<!-- Products will load from data.js -->
-
-</div>
-
-</div>
-
-</section>
-<!-- Why Trust Us -->
-
-<section class="why-trust">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Why Choose Us</span>
-
-<h2>Why Trust Smart Picks Daily?</h2>
-
-<p>
-We believe in honest recommendations, transparent reviews and helpful buying guides.
-</p>
-
-</div>
-
-<div class="trust-grid">
-
-<div class="trust-card">
-<h3>✅ Honest Reviews</h3>
-<p>No fake ratings. Every recommendation is written for real users.</p>
-</div>
-
-<div class="trust-card">
-<h3>🔍 Expert Research</h3>
-<p>We compare features, pricing, pros and cons before recommending products.</p>
-</div>
-
-<div class="trust-card">
-<h3>⚡ Regular Updates</h3>
-<p>Our articles and reviews are updated to keep information accurate.</p>
-</div>
-
-<div class="trust-card">
-<h3>🛡 Affiliate Transparency</h3>
-<p>Some links are affiliate links, but our opinions are always independent.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Latest Articles -->
-
-<section class="latest-articles">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Latest Blog</span>
-
-<h2>Latest Articles</h2>
-
-<p>
-Fresh guides, AI news and product recommendations.
-</p>
-
-</div>
-
-<div class="blog-grid">
-
-<!-- Blog posts will load from data.js -->
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Newsletter -->
-
-<section class="newsletter">
-
-<div class="container newsletter-box">
-
-<h2>Join Our Newsletter</h2>
-
-<p>
-Get the latest AI tools, software deals and productivity tips directly in your inbox.
-</p>
-
-<form class="newsletter-form">
-
-<input
-type="email"
-placeholder="Enter your email address"
-required
->
-
-<button type="submit">
-Subscribe
-</button>
-
-</form>
-
-</div>
-
-</section>
-<!-- Testimonials -->
-
-<section class="testimonials">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Testimonials</span>
-
-<h2>What Our Readers Say</h2>
-
-<p>
-Realistic placeholder testimonials for the Smart Picks Daily website.
-</p>
-
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-
-<div class="stars">★★★★★</div>
-
-<p>
-"Smart Picks Daily helped me find amazing AI tools that save me hours every week."
-</p>
-
-<h4>Michael Johnson</h4>
-
-<span>Content Creator</span>
-
-</div>
-
-<div class="testimonial-card">
-
-<div class="stars">★★★★★</div>
-
-<p>
-"I love the honest reviews. Everything is clean, simple and trustworthy."
-</p>
-
-<h4>Emily Davis</h4>
-
-<span>Freelancer</span>
-
-</div>
-
-<div class="testimonial-card">
-
-<div class="stars">★★★★★</div>
-
-<p>
-"The buying guides are easy to understand and helped me choose the right software."
-</p>
-
-<h4>Daniel Wilson</h4>
-
-<span>Small Business Owner</span>
+<p>Updated Daily</p>
 
 </div>
 
@@ -401,194 +233,3 @@ Realistic placeholder testimonials for the Smart Picks Daily website.
 </div>
 
 </section>
-
-<!-- FAQ -->
-
-<section class="faq">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>Frequently Asked Questions</span>
-
-<h2>Need Help?</h2>
-
-</div>
-
-<div class="faq-list">
-
-<div class="faq-item">
-
-<h3>What is Smart Picks Daily?</h3>
-
-<p>
-We recommend the best AI tools, software, digital products, useful websites and Amazon finds.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Do you charge readers?</h3>
-
-<p>
-No. Our content is free to read. Some links may be affiliate links that support our website.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>How do you choose products?</h3>
-
-<p>
-We research features, pricing, user experience, pros and cons before recommending products.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Can I suggest a product?</h3>
-
-<p>
-Yes. Contact us through the Contact page and we'll review your suggestion.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- Final CTA -->
-
-<section class="final-cta">
-
-<div class="container">
-
-<div class="cta-box">
-
-<h2>
-Ready to Discover the Best AI Tools?
-</h2>
-
-<p>
-Join thousands of readers discovering the best AI tools, software, websites and digital products every day.
-</p>
-
-<div class="cta-buttons">
-
-<a href="#" class="btn primary-btn">
-Explore Tools
-</a>
-
-<a href="#" class="btn secondary-btn">
-View Best Deals
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer class="footer">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div class="footer-column">
-
-<h3>Smart Picks Daily</h3>
-
-<p>
-Discover the best AI tools, software, productivity apps, useful websites and digital products.
-</p>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Quick Links</h4>
-
-<ul>
-
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Categories</a></li>
-
-<li><a href="#">Reviews</a></li>
-
-<li><a href="#">Blog</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Legal</h4>
-
-<ul>
-
-<li><a href="#">Privacy Policy</a></li>
-
-<li><a href="#">Terms & Conditions</a></li>
-
-<li><a href="#">Affiliate Disclosure</a></li>
-
-<li><a href="#">Disclaimer</a></li>
-
-</ul>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Follow Us</h4>
-
-<ul>
-
-<li><a href="#">Instagram</a></li>
-
-<li><a href="#">Facebook</a></li>
-
-<li><a href="#">YouTube</a></li>
-
-<li><a href="#">Pinterest</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<p>
-© 2026 Smart Picks Daily. All Rights Reserved.
-</p>
-
-</div>
-
-</div>
-
-</footer>
-
-<script src="data.js"></script>
-<script src="script.js"></script>
-
-</body>
-</html>
